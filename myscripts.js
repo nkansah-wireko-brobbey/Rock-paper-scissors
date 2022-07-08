@@ -4,4 +4,14 @@ function computerPlay() {
 
  return Math.floor(Math.random()*(maximum-minimum+1))+minimum;
 }
-console.log(computerPlay());
+
+function getUserInput(){
+    let Userinput;
+    Userinput = prompt();
+    if(Userinput != null){
+        Userinput = Userinput.toUpperCase();
+    }
+    return Userinput;
+}
+
+console.log(getUserInput());
