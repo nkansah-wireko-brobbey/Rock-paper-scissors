@@ -13,5 +13,22 @@ function getUserInput(){
     }
     return Userinput;
 }
-
+function computerSelection(computerInput){
+    let stringOutput;
+    if(computerInput != 0 && computerInput <= 3){
+        switch (computerInput) {
+            case 1:
+                stringOutput = "ROCK";
+                break;
+            case 2:
+                stringOutput = "PAPER";
+                break;
+            default:
+                stringOutput = "SCISSORS";
+                break;
+        }
+    }
+    return stringOutput;
+}
 console.log(getUserInput());
+console.log(computerSelection(computerPlay()));
