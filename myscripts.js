@@ -16,7 +16,28 @@ function getUserInput(){
     return Userinput;
 }
 
-// Change computer generated value to string
+function optionToNumber(input){
+    let numberOutput;
+    if(input != null){
+        switch (input) {
+            case "ROCK":
+                numberOutput = 1;
+                break;
+            case "PAPER":
+                numberOutput = 2;
+                break;
+            case "SCISSORS":
+                numberOutput = 3;
+                break;
+            default:
+                numberOutput = 0;
+                break;
+        }
+    }
+    return numberOutput;
+}
+
+// Change number value to string
 function numberToOption(input){
     let stringOutput;
     if(input != 0 && input <= 3){
