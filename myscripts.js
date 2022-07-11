@@ -17,10 +17,10 @@ function getUserInput(){
 }
 
 // Change computer generated value to string
-function computerSelection(computerInput){
+function numberToOption(input){
     let stringOutput;
-    if(computerInput != 0 && computerInput <= 3){
-        switch (computerInput) {
+    if(input != 0 && input <= 3){
+        switch (input) {
             case 1:
                 stringOutput = "ROCK";
                 break;
@@ -51,5 +51,5 @@ function selectWinner(userInput, computerInput){
     return winner;
 }
 console.log(getUserInput());
-console.log(computerSelection(computerPlay()));
-console.log(selectWinner(getUserInput,computerSelection(computerPlay())));
+console.log(numberToOption(computerPlay()));
+console.log(selectWinner(getUserInput,numberToOption(computerPlay())));
