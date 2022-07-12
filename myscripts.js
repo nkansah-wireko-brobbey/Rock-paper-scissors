@@ -62,7 +62,7 @@ function numberToOption(input){
 }
 
 // Declare winner of a round
-function selectWinner(userInput, computerInput){
+function playRound(userInput, computerInput){
     const user = 1;
     const computer = 0;
     const tie = 2;
@@ -95,32 +95,35 @@ function winnerDisplay(_code){
         return "The game was a tie";
     }
 }
-let counter = 0;
-let score = 0;
-let computerPlayer = 0;
-let userPlayer = 0;
-while(true){
-
-    score = selectWinner(optionToNumber(getUserInput()), computerPlay())
-
-   
-        if(score == 1){
-            userPlayer++;
-        }else if(score == 0){
-            computerPlayer++;
+function playGame(){    
+    let counter = 0;
+    let score = 0;
+    let computerPlayer = 0;
+    let userPlayer = 0;
+    while(true){
+    
+        score = playRound(optionToNumber(getUserInput()), computerPlay())
+    
+       
+            if(score == 1){
+                userPlayer++;
+            }else if(score == 0){
+                computerPlayer++;
+            }
+        
+        console.log(winnerDisplay(score));
+        counter++;
+        if(counter == 5){
+            break;
         }
     
-    console.log(winnerDisplay(score));
-    counter++;
-    if(counter == 5){
-        break;
     }
-
+    if(userPlayer > computerPlayer){
+        console.log("You WON the game");
+    }else if(userPlayer < computerPlayer){
+        console.log("Computer WON this game, better luck next time!");
+    }else{
+        console.log("The game was a TIE");
+    }
 }
-if(userPlayer > computerPlayer){
-    console.log("You WON the game");
-}else if(userPlayer < computerPlayer){
-    console.log("Computer WON this game, better luck next time!");
-}else{
-    console.log("The game was a TIE");
-}
+playGame();
