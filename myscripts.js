@@ -100,10 +100,11 @@ function playGame(){
     let score = 0;
     let computerPlayer = 0;
     let userPlayer = 0;
-    let userOption = optionToNumber(getUserInput());
-    let computerOption = computerPlay();
+    let userOption;
+    let computerOption;
     while(true){
-    
+        userOption = optionToNumber(getUserInput());
+        computerOption = computerPlay();
         score = playRound(userOption, computerOption);
     
        
