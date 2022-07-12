@@ -86,11 +86,11 @@ function playRound(userInput, computerInput){
 }
 
 // Display string 
-function winnerDisplay(_code){
+function winnerDisplay(_code, userInput, computerInput){
     if (_code == 1){
-        return "You Won";
+        return `You WON, you selected ${userInput} against ${computerInput}`;
     }else if(_code == 0){
-        return "Computer Won";
+        return`You LOOSE, you selected ${userInput} against ${computerInput}`;
     }else{
         return "The game was a tie";
     }
