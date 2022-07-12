@@ -17,6 +17,7 @@ function getUserInput(){
     return Userinput;
 }
 
+// Convert option entry to number
 function optionToNumber(input){
     let numberOutput;
     if(input != null){
@@ -38,7 +39,7 @@ function optionToNumber(input){
     return numberOutput;
 }
 
-// Change number value to string
+// Change number value to option
 function numberToOption(input){
     let stringOutput;
     if(input != 0 && input <= 3){
@@ -59,6 +60,8 @@ function numberToOption(input){
     }
     return stringOutput;
 }
+
+// Declare winner of a round
 function selectWinner(userInput, computerInput){
     const user = 1;
     const computer = 0;
@@ -82,6 +85,7 @@ function selectWinner(userInput, computerInput){
     return winner;
 }
 
+// Display string 
 function winnerDisplay(_code){
     if (_code == 1){
         return "You Won";
