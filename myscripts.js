@@ -13,6 +13,7 @@ function getUserInput(){
     if(Userinput != null){
         Userinput = Userinput.toUpperCase();
     }
+   
     return Userinput;
 }
 
@@ -48,8 +49,11 @@ function numberToOption(input){
             case 2:
                 stringOutput = "PAPER";
                 break;
-            default:
+            case 3:
                 stringOutput = "SCISSORS";
+                break;
+            default:
+                stringOutput = "NULL";
                 break;
         }
     }
@@ -62,15 +66,54 @@ function selectWinner(userInput, computerInput){
     winner = 2;
             if(userInput == computerInput){
                 winner = tie;
-            }else if(userInput == 'SCISSORS' && computerInput == 'ROCK'){
+            }else if(userInput == 3 && computerInput == 1){
                 winner = computer;
-            }else if(userInput == 'ROCK' && computerInput == 'PAPER'){
+            }else if(userInput == 1 && computerInput == 2){
+                winner = computer;
+            }else if(userInput == 2 && computerInput == 3){
                 winner = computer;
             }else{
                 winner = user;
             }
+           
+
     return winner;
 }
-console.log(getUserInput());
-console.log(numberToOption(computerPlay()));
-console.log(selectWinner(getUserInput,numberToOption(computerPlay())));
+
+function winnerDisplay(_code){
+    if (_code == 1){
+        return "You Won";
+    }else if(_code == 0){
+        return "Computer Won";
+    }else{
+        return "The game was a tie";
+    }
+}
+let counter = 0;
+let score = 0;
+let computerPlayer = 0;
+let userPlayer = 0;
+while(true){
+
+    score = selectWinner(optionToNumber(getUserInput()), computerPlay())
+
+    if(counter == 5){
+        break;
+    }else{
+        if(score == 1){
+            userPlayer++;
+        }else if(score == 0){
+            computerPlayer++;
+        }
+    }
+    console.log(winnerDisplay(score));
+    counter++;
+
+}
+if(userPlayer > computerPlayer){
+    console.log("You WON the game");
+}else if(userPlayer < computerPlayer){
+    console.log("Computer WON this game, better luck next time!");
+}else{
+    console.log("The game was a TIE");
+}
