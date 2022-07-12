@@ -97,17 +97,18 @@ while(true){
 
     score = selectWinner(optionToNumber(getUserInput()), computerPlay())
 
-    if(counter == 5){
-        break;
-    }else{
+   
         if(score == 1){
             userPlayer++;
         }else if(score == 0){
             computerPlayer++;
         }
-    }
+    
     console.log(winnerDisplay(score));
     counter++;
+    if(counter == 5){
+        break;
+    }
 
 }
 if(userPlayer > computerPlayer){
