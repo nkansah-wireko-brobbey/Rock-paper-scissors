@@ -100,9 +100,11 @@ function playGame(){
     let score = 0;
     let computerPlayer = 0;
     let userPlayer = 0;
+    let userOption = optionToNumber(getUserInput());
+    let computerOption = computerPlay();
     while(true){
     
-        score = playRound(optionToNumber(getUserInput()), computerPlay())
+        score = playRound(userOption, computerOption);
     
        
             if(score == 1){
@@ -111,7 +113,7 @@ function playGame(){
                 computerPlayer++;
             }
         
-        console.log(winnerDisplay(score));
+        console.log(winnerDisplay(score, numberToOption(userOption), numberToOption(computerOption)));
         counter++;
         if(counter == 5){
             break;
