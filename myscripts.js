@@ -72,6 +72,8 @@ function selectWinner(userInput, computerInput){
                 winner = computer;
             }else if(userInput == 2 && computerInput == 3){
                 winner = computer;
+            }else if(userInput == 0){
+                winner = computer;
             }else{
                 winner = user;
             }
