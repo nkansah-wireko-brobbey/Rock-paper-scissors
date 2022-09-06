@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: darkgray;
     height: 100%;
     gap: 15px;
 }
@@ -18,6 +18,8 @@ body{
     
     width: 200px;
     height: 200px;
-    border: black 2px solid;
+    border: none;
     border-radius: 20px;
+    font-size: large;
+    /* box-shadow: rgba(#111, 0.4); */
 }
