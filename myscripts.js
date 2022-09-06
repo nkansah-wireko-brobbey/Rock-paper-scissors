@@ -129,4 +129,4 @@ function playGame(){
         console.log("The game was a TIE");
     }
 }
-playGame();
+//playGame();
