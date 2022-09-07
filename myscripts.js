@@ -17,7 +17,7 @@ function computerPlay() {
 // Get inputs from user
 function getUserInput(){
     let Userinput;
-    Userinput = prompt();
+    // Userinput = 
     if(Userinput != null){
         Userinput = Userinput.toUpperCase();
     }
@@ -103,7 +103,7 @@ function winnerDisplay(_code, userInput, computerInput){
         return "The game was a tie";
     }
 }
-function playGame(){    
+function playGame(){     
     let counter = 0;
     let score = 0;
     let computerPlayer = 0;
@@ -137,4 +137,4 @@ function playGame(){
         console.log("The game was a TIE");
     }
 }
-//playGame();
+// playGame();
