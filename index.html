@@ -10,10 +10,13 @@
 </head>
 <body>
     <div class="main-page">
+        <div class="text-container">
+            <p>Welcome!!! DO YOU HAVE WHAT IT TAKES??</p>
+        </div>
         <div class="container">
-            <input type="button" id="btn" value="Rock" onclick="return">
-            <input type="button" id="btn" value="Paper" onclick="return">
-            <input type="button" id="btn" value="Scissors" onclick="return">
+            <input type="button" id="btn" value="Rock" data-target="1" onclick="testFunction(this)">
+            <input type="button" id="btn" value="Paper" data-target="2" onclick="testFunction(this)">
+            <input type="button" id="btn" value="Scissors" data-target="3" onclick="testFunction(this)">
            
         </div>
     </div>

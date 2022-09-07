@@ -1,3 +1,11 @@
+// Test Function Definition
+function testFunction(e){
+console.dir(e.dataset.target);
+console.dir(e)
+}
+
+
+
 // Generate random number for computer
 function computerPlay() {
     const maximum = 3;
