@@ -4,6 +4,22 @@ console.dir(e.dataset.target);
 console.dir(e)
 }
 
+// Player Buttons
+const buttons = document.querySelectorAll("button#btn");
+
+// Disable Buttons
+function disableButtons(){
+    buttons.forEach(element => {
+        element.disabled = true;
+    });
+}
+// Enable Buttons
+function enableButtons(){
+    buttons.forEach(element => {
+        element.disabled = false;
+    });
+}
+
 
 
 // Generate random number for computer
@@ -21,7 +37,6 @@ function getUserInput(){
     if(Userinput != null){
         Userinput = Userinput.toUpperCase();
     }
-   
     return Userinput;
 }
 
@@ -116,7 +131,8 @@ function playGame(){
         score = playRound(userOption, computerOption);
     
        
-            if(score == 1){
+            if(score == 1){`
+            `
                 userPlayer++;
             }else if(score == 0){
                 computerPlayer++;
