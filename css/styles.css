@@ -4,7 +4,7 @@ body{
 }
 .main-page{
     /* width: 100%; */
-    /* height: 900px; */
+    height: 300px;
     padding: 50px;
 }
 .container{
@@ -24,6 +24,7 @@ body{
     border: none;
     border-radius: 20px;
     font-size: large;
+    transition: ease-in-out 300ms;
     /* box-shadow: rgba(#111, 0.4); */
 }
 div.text-container{
@@ -45,10 +46,18 @@ p#winner{
     text-align: center;
     font-size: 17pt;
     color: #fff
+    
 }
 p#score{
     font-family: 'Righteous';
     text-align: center;
     font-size: 17pt;
     color: #fff
+}
+#btn:hover{
+    
+    width: 240px;
+    height: 240px;
+    
+    /* box-shadow: rgba(#111, 0.4); */
 }

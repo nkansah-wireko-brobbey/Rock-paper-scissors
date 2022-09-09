@@ -63,7 +63,8 @@ function roundPlay(player){
             }
            
             if(playerScore >= 5 || computerScore >= 5){   
-
+                
+                document.getElementById("score").innerHTML = `PLAYER ${playerScore} VS COMPUTER ${computerScore}`;
                 disableButtons();       
                 if(playerScore >= 5){
                     document.getElementById("winner").innerHTML = `You won ${playerScore}`;
@@ -74,10 +75,6 @@ function roundPlay(player){
                     
                 }
 
-            }else{
-                document.getElementById("score").innerHTML = `PLAYER ${playerScore} VS COMPUTER ${computerScore}`;
-                console.log(`PLAYER ${playerScore} VS COMPUTER ${computerScore}`);
-                console.dir(document.getElementById("score").innerHTML);
             }
 }
 
