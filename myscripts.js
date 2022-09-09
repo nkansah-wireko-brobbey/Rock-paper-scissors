@@ -66,9 +66,11 @@ function roundPlay(player){
 
                 disableButtons();       
                 if(playerScore >= 5){
+                    document.getElementById("p.winner").innerHTML = `You won ${playerScore}`;
                     console.log("You WON!"+playerScore);
                 }else{
                     console.log("Computer WON!"+computerScore);
+                    document.getElementById("p.winner").innerHTML = `You won ${computerScore}`;
                 }
 
             }
