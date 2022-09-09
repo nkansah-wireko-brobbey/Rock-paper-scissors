@@ -40,13 +40,13 @@ p.title{
     text-align: center;
     font-size: 20pt;
 }
-p.winner{
+p#winner{
     font-family: 'Righteous';
     text-align: center;
     font-size: 17pt;
     color: #fff
 }
-p.score{
+p#score{
     font-family: 'Righteous';
     text-align: center;
     font-size: 17pt;
