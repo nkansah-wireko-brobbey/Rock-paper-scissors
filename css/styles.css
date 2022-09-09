@@ -45,19 +45,22 @@ p#winner{
     font-family: 'Righteous';
     text-align: center;
     font-size: 17pt;
-    color: #fff
-    
+    color: #fff;
+    transition: ease-in-out 300ms;
 }
 p#score{
     font-family: 'Righteous';
     text-align: center;
     font-size: 17pt;
-    color: #fff
+    color: #fff;
+    transition: ease-in-out 200ms;
 }
 #btn:hover{
     
-    width: 240px;
-    height: 240px;
+    transform: scale(1.1);
     
     /* box-shadow: rgba(#111, 0.4); */
+}
+#btn:active{
+    transform: scale(0.98);
 }
