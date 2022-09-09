@@ -3,9 +3,17 @@ function testFunction(e){
 console.dir(e.dataset.target);
 console.dir(e)
 }
+// Global Variables
+let playerScore = 0;
+let computerScore = 0;
+const user = 1;
+const computer = 0;
+const tie = 2;
+let winner = 2;
 
 // Player Buttons
-const buttons = document.querySelectorAll("button#btn");
+const buttons = document.querySelectorAll('button');
+console.dir(buttons);
 
 // Disable Buttons
 function disableButtons(){
@@ -20,8 +28,6 @@ function enableButtons(){
     });
 }
 
-
-
 // Generate random number for computer
 function computerPlay() {
     const maximum = 3;
@@ -29,6 +35,52 @@ function computerPlay() {
 
  return Math.floor(Math.random()*(maximum-minimum+1))+minimum;
 }
+
+// Round Play
+
+function roundPlay(player){
+    let computerInput = computerPlay();
+
+            if(player == computerInput){
+                winner = tie;
+                playerScore++;
+                computerScore++;
+            }else if(player == 3 && computerInput == 1){
+                winner = computer;
+                computerScore++;
+            }else if(player == 1 && computerInput == 2){
+                winner = computer;
+                computerScore++;
+            }else if(player == 2 && computerInput == 3){
+                winner = computer;
+                computerScore++;
+            }else if(player == 0){
+                winner = computer;
+                computerScore++;
+            }else{
+                winner = user;
+                playerScore++;
+            }
+           
+            if(playerScore >= 5 || computerScore >= 5){   
+
+                disableButtons();       
+                if(playerScore >= 5){
+                    console.log("You WON!"+playerScore);
+                }else{
+                    console.log("Computer WON!"+computerScore);
+                }
+
+            }
+}
+
+
+buttons.forEach(element => {
+    element.addEventListener('click',function(){
+            roundPlay(element.dataset.target);
+    })
+});
+
 
 // Get inputs from user
 function getUserInput(){
@@ -89,23 +141,38 @@ function playRound(userInput, computerInput){
     const user = 1;
     const computer = 0;
     const tie = 2;
-    winner = 2;
+    let winner = 2;
             if(userInput == computerInput){
                 winner = tie;
+                playerScore++;
+                computerScore++;
             }else if(userInput == 3 && computerInput == 1){
                 winner = computer;
+                computerScore++;
             }else if(userInput == 1 && computerInput == 2){
                 winner = computer;
+                computerScore++;
             }else if(userInput == 2 && computerInput == 3){
                 winner = computer;
+                computerScore++;
             }else if(userInput == 0){
                 winner = computer;
+                computerScore++;
             }else{
                 winner = user;
+                playerScore++;
             }
            
+            if(playerScore || computerScore >= 5){`            `
+                if(playerScore >= 5){
+                    console.log("You WON!"+playerScore);
+                }else{
+                    console.log("Computer WON!"+computerScore);
+                }
 
-    return winner;
+            }
+
+    
 }
 
 // Display string 
